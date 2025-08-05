@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wahaha</title>
+    <link rel="stylesheet" href="../CSS/todo.css" />
+    <link rel="stylesheet" href="../CSS/tasks.css" />
+    <link rel="stylesheet" href="../CSS/modal.css" />
+    <link rel="stylesheet" href="../CSS/checkbox.css" />
+    <link rel="stylesheet" href="../CSS/sidebar.css" />
+  </head>
+
+    <h1>To-do List</h1>
+    <div class="todo-top-bar">
+      <button class="add-todo js-add-todo">+</button>
+      <div class="todo-search">
+        <input class="todo-search-bar" type="text" placeholder="Search... (not working yet)" />
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="todo-filter">
+        <select>
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+        </select>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="todo-list js-todo-list"></div>
+
+      <!-- Stickers go *after* todo-list in HTML but we’ll position them visually on the left -->
+      <div class="sticker-tabs">
+        <div class="sticker-tab all active" data-group="all">📋 All</div>
+        <div class="sticker-tab priority-select high" data-group="high">🔥 High</div>
+        <div class="sticker-tab priority-select medium" data-group="medium">📘 Medium</div>
+        <div class="sticker-tab priority-select low" data-group="low">🍃 Low</div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="../Scripts/todo.js" type="module"></script>
+  </body>
+</html>
