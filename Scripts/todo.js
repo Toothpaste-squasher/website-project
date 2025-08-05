@@ -21,7 +21,7 @@ document.addEventListener("click", (event) => {
         <div class="modal-content">
           <div class="modal-header">
             <input class="new-task-name" value="${createNewName()}"/>
-            <button class="priority medium">medium</button>
+            <button class="new-task priority medium">medium</button>
           </div>
           <div class="modal-body">
             <div class="modal-body-left">
