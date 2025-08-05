@@ -1,0 +1,42 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Tabs should stick out from the left */
+.sticker-tabs {
+  left: -100px; /* Stick out left */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  z-index: 999;
+}
+
+.sticker-tab {
+  background-color: #eee;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #333;
+  width: 100px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.sticker-tab:hover {
+  background-color: #ddd;
+  transform: translateX(-5px);
+}
+
+.sticker-tab.active {
+  background-color: rgb(149, 143, 143);
+  color: white;
+  transform: translateX(-5px);
+}

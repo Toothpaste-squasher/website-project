@@ -1,0 +1,186 @@
+/* General */
+textarea {
+  resize: none;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  outline: none;
+}
+
+.new-todo {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; /* Center it vertically and horizontally */
+  padding: 40px 60px;
+  border-radius: 10px;
+  width: 50vw;
+  height: 50vh;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+}
+
+.new-task-name {
+  text-align: left;
+  font-size: 2vw;
+  color: rgb(112, 112, 112);
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.priority {
+  border: none;
+  border-radius: 15px;
+  width: 60px;
+  height: 30px;
+  margin-right: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;  
+  background-color: rgba(121, 235, 255, 1);
+  color: black;
+}
+
+/* modal body */
+.modal-section-title {
+  font-size: 1.75vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  display: block;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.modal-body-left {
+  justify-content: left;
+  display: grid;
+  border-right: 2px solid rgb(233, 232, 232);
+}
+
+#taskDescription {
+  height: 10vw;
+  width: 25vw;
+  font-size: 20px;
+}
+
+.modal-body-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+}
+
+.date-input {
+  width: 70%;
+  height: 30px;
+  background-color: #ebebeb;
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 2px;
+}
+
+.up-date, .down-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.group-dropdown {
+  width: 90%;
+  height: 35px;
+  font-size: 20px;
+  background-color: #ebebeb;
+}
+
+.group-dropdown > option {
+  font-size: 20px;
+}
+
+/* Window footer */
+.window-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.close-window-btn, .save-newTask {
+  margin: 0 10px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 22.5px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-window-btn, .save-newTask:hover {
+  box-shadow: #ccc;
+}
+
+.close-window-btn {
+  background-color: rgb(214, 129, 129);
+}
+
+.save-newTask {
+  background-color: rgb(115, 199, 115);
+}
+
+/* Create fade in animation for the background when window appears */
+.new-todo {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.close-window-btn:hover {
+  background-color: rgb(200, 100, 100);
+}
+.save-newTask:hover {
+  background-color: rgb(100, 200, 100);
+}
+
+.remove-date-btn {
+  background-color: #ebebeb;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(56, 50, 50);
+  margin-top: 5px;
+}

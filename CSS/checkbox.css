@@ -1,0 +1,29 @@
+.checkbox {
+    appearance: none; /* <-- important: removes native styling */
+    -webkit-appearance: none; /* for Safari */
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+}
+
+.checkbox:checked {
+    background-color: #6ac16b;
+    transform: scale(1.05);
+    border: none;
+}
+
+.checkbox:checked::after {
+    content: "✔";
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    top: 0;
+    left: 4px;
+}
